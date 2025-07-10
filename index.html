@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankalp H S</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo-link">
+                <img src="logo.png" alt="Sankalp H S Logo" class="nav-logo-img">
+            </a>
+            
+            <div class="nav-links">
+                <!-- <a href="#home" class="nav-link">Home</a> -->
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#interests" class="nav-link">Interests</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <div class="mobile-menu">
+                <div class="mobile-menu-container">
+                    <!-- <a href="#home" class="mobile-nav-link">Home</a> -->
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#projects" class="mobile-nav-link">Projects</a>
+                    <a href="#skills" class="mobile-nav-link">Skills</a>
+                    <a href="#education" class="mobile-nav-link">Education</a>
+                    <a href="#interests" class="mobile-nav-link">Interests</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1200">
+                <h1 class="name">Sankalp H S</h1>
+                <p class="tagline">Aspiring AI engineer building cool things with code and AI</p>
+            </div>
+            
+            <div class="scroll-icon-container" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                <div class="scroll-icon">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <p class="scroll-text">Scroll Down</p>
+            </div>
+        </div>
+    </main>
+
+    <section id="about" class="about-section">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">About Me</h2>
+            <p class="about-description" data-aos="fade-up" data-aos-delay="200">I'm an aspiring AI engineer passionate about building intelligent agents that solve real-world problems. I love experimenting with new tech, front-end development, and prompt engineering.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <div class="project-content">
+                        <h3 class="project-title">Interactive Solar System</h3>
+                        <p class="project-description">A web-based solar simulation with real-time planet data.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">MERN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="project-content">
+                        <h3 class="project-title">IoT-Based RC Car</h3>
+                        <p class="project-description">Arduino-powered car showing live weather stats via phone control.</p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Arduino</span>
+                            <span class="tech-badge">C</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card full-width" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Driven Interactive Websites (Vibe Coded)</h3>
+                        <p class="project-description">Developed various interactive web simulations:<br>
+                            • Bouncing Ball Simulation: Adjust gravity, air resistance, elasticity, and ball count.<br>
+                            • Solar System Simulation: Real-time speed adjustment to match planetary orbits.<br>
+                            • Space-Time Curvature Visualization: Dynamic gravity wells based on planetary properties.<br>
+                            • Nimbus App: Conceptualized a multimodal transport app providing safe, economical, and eco-friendly routes using AI.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">MERN</span>
+                            <span class="tech-badge">AI tools</span>
+                            <span class="tech-badge">Simulations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Skills</h2>
+            
+            <div class="skills-categories">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                    <h3 class="category-title">Programming Languages</h3>
+                    
+                    <!-- Proficient Level -->
+                    <div class="skill-level skill-level-inline">
+                        <h4 class="level-title">Proficient:</h4>
+                        <div class="skills-inline">
+                            <div class="skill-item-inline">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="skill-item-inline">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Intermediate Level -->
+                    <div class="skill-level skill-level-inline">
+                        <h4 class="level-title">Intermediate:</h4>
+                        <div class="skills-inline">
+                            <div class="skill-item-inline">
+                                <i class="fas fa-code"></i>
+                                <span>C</span>
+                            </div>
+                            <div class="skill-item-inline">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item-inline">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Basic Level -->
+                    <div class="skill-level skill-level-inline">
+                        <h4 class="level-title">Basic:  </h4>
+                        <div class="skills-inline">
+                            <div class="skill-item-inline">
+                                <i class="fas fa-code"></i>
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-item-inline">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item-inline">
+                                <i class="fas fa-microchip"></i>
+                                <span>ARM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frameworks/Technologies -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                    <h3 class="category-title">Frameworks/Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span class="skill-name">MERN Stack</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <span class="skill-name">DSA</span>
+                             <span class="proficiency">(basics)</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-github"></i></div>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                            <span class="skill-name">Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                            <span class="skill-name">UI/UX</span>
+                            <span class="proficiency">(basics)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Capabilities -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                    <h3 class="category-title">Tools & Capabilities</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                            <span class="skill-name">Canva</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span class="skill-name">VS Code with GitHub Copilot</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                            <span class="skill-name">AI tools for learning and project efficiency</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                    <h3 class="category-title">Special Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <span class="skill-name">Knowledge of AI tools and their optimal applications</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-rocket"></i></div>
+                            <span class="skill-name">Strong ability to leverage AI for learning and project enhancement</span>
+                        </div>
+                    </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Education</h2>
+            
+            <div class="education-timeline">
+                <!-- B.Tech -->
+                <div class="education-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="degree">B.Tech in Computer Science and Engineering (AIML)</h3>
+                        <div class="institute">PES University, RR Road Campus, Bangalore</div>
+                        <div class="duration">2023–2027</div>
+                    </div>
+                </div>
+                
+                <!-- PUC -->
+                <div class="education-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="degree">PUC in PCMC</h3>
+                        <div class="institute">Expert PU College, Mangalore</div>
+                        <div class="duration">Percentage: 95%</div>
+                        <div class="grades">
+                            <span class="grade-item">Physics: 98</span>
+                            <span class="grade-item">Chemistry: 96</span>
+                            <span class="grade-item">Math: 99</span>
+                            <span class="grade-item">Computers: 100</span>
+                        </div>
+                        <div class="achievements">KCET Rank: 2382 | JEE Percentile: 91.7 | Qualified for JEE Advanced</div>
+                    </div>
+                </div>
+                
+                <!-- Schooling -->
+                <div class="education-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="degree">Schooling</h3>
+                        <div class="institute">Euro School, Hassan (ICSE Board)</div>
+                        <div class="duration">Percentage: 87.8%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="interests-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Interests</h2>
+            
+            <div class="interests-grid" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <span class="interest-label">Space & Rocket Technology</span>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <span class="interest-label">Science</span>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <span class="interest-label">Photography</span>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <span class="interest-label">Emerging Technologies</span>
+                </div>
+                
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <span class="interest-label">Space Exploration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+        <div class="container">
+            <div class="social-links" data-aos="fade-up" data-aos-duration="800">
+                <a href="https://github.com/sankalphs" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sankalphs" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/sankalphs" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="email-container" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800">
+                <a href="mailto:sankalp.sss28@gmail.com" class="email-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>sankalp.sss28@gmail.com</span>
+                </a>
+            </div>
+            
+            <div class="copyright" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                <p>© Sankalp H S — Built with Love<span class="heart">❤️</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: false,
+            offset: 50,
+            disable: window.innerWidth < 768 ? true : false
+        });
+        
+        // Refresh AOS on window resize
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+    </script>
+</body>
+</html>
