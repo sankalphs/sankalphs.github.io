@@ -17,7 +17,7 @@ html {
     --accent: #00e5ff;
     --accent-dark: #00b8cc;
     --grid-size: 25px;
-    --font-primary: 'Rajdhani', sans-serif;
+    --font-primary: 'Libre Baskerville', sans-serif;
     --font-secondary: 'Space Mono', monospace;
     --header-height: 80px; /* Variable for header height */
 }
@@ -288,7 +288,6 @@ body::before {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards 0.5s;
-    text-transform: uppercase;
     position: relative;
 }
 
