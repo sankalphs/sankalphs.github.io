@@ -117,7 +117,7 @@ body::before {
 }
 
 .nav-logo-link:hover .nav-logo-img {
-    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
+    filter: drop-shadow(0 0 8px rgba(102, 255, 153, 0.45));
     transform: scale(1.05);
 }
 
@@ -770,7 +770,7 @@ footer.footer-section {
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 229, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(102, 255, 153, 0.15) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -1409,4 +1409,191 @@ footer.footer-section {
     }
 }
 
-/* Education Section */
+/* Terminal Theme Overrides */
+body.terminal {
+    /* Phosphor green palette and mono font */
+    --bg-primary: #0b0f0c;
+    --bg-secondary: #0a0d0b;
+    --text-primary: #c9ffd9;
+    --text-secondary: #84d9a8;
+    --accent: #66ff99;
+    --accent-dark: #3bd98b;
+    --grid-size: 0px; /* disable grid */
+    --font-primary: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-secondary: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+/* CRT scanlines + subtle glow, replace grid */
+body.terminal::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at center, rgba(102, 255, 153, 0.03) 0%, transparent 60%),
+        repeating-linear-gradient(to bottom, rgba(102, 255, 153, 0.035) 0px, rgba(102, 255, 153, 0.035) 1px, transparent 2px);
+}
+
+body.terminal .noise-overlay {
+    opacity: 0.035;
+}
+
+/* Header / Nav: minimal, mono, green accent */
+body.terminal .header { box-shadow: none; }
+body.terminal .navbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: rgba(8, 12, 10, 0.92);
+    border-bottom: 1px solid rgba(102, 255, 153, 0.25);
+}
+body.terminal .nav-link,
+body.terminal .mobile-nav-link {
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-family: var(--font-secondary);
+}
+body.terminal .nav-link::after { background-color: var(--accent); height: 1px; bottom: -6px; }
+
+/* Hero: terminal-like prompt styling */
+body.terminal .name {
+    font-family: var(--font-secondary);
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(102, 255, 153, 0.18);
+}
+body.terminal .name::after { display: none; }
+
+body.terminal .tagline {
+    color: var(--text-primary);
+    opacity: 1; /* keep crisp */
+}
+body.terminal .tagline::before {
+    content: '$ ';
+    color: var(--accent);
+    margin-right: 6px;
+}
+body.terminal .tagline::after {
+    content: '█';
+    display: inline-block;
+    margin-left: 6px;
+    color: var(--accent);
+    animation: blink-cursor 1s steps(1, end) infinite;
+}
+
+@keyframes blink-cursor { 50% { opacity: 0; } }
+
+/* Sections: simpler headings, no decorative underline */
+body.terminal .section-title {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 700;
+    font-family: var(--font-secondary);
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--accent);
+}
+body.terminal .section-title::after { display: none; }
+body.terminal .section-title::before {
+    content: none; /* keep clean; prompt lives with tagline */
+}
+
+/* Cards and containers: flat, bordered panels */
+body.terminal .skill-category,
+body.terminal .project-card,
+body.terminal .education-content,
+body.terminal .email-container {
+    background-color: rgba(8, 12, 10, 0.7);
+    border: 1px solid rgba(102, 255, 153, 0.18);
+    box-shadow: none;
+}
+body.terminal .skill-category:hover,
+body.terminal .project-card:hover,
+body.terminal .education-item:hover .education-content,
+body.terminal .email-container:hover {
+    transform: none;
+    border-color: rgba(102, 255, 153, 0.35);
+    box-shadow: 0 0 0 1px rgba(102, 255, 153, 0.08);
+}
+
+/* Project badges */
+body.terminal .tech-badge {
+    background-color: rgba(102, 255, 153, 0.08);
+    color: var(--text-primary);
+    border-color: rgba(102, 255, 153, 0.22);
+}
+body.terminal .project-card:hover .tech-badge {
+    background-color: rgba(102, 255, 153, 0.12);
+    border-color: rgba(102, 255, 153, 0.3);
+}
+
+/* Footer: thin green rule and minimal icons */
+body.terminal .footer-section::before {
+    background: linear-gradient(90deg, rgba(102, 255, 153, 0) 0%, rgba(102, 255, 153, 0.35) 50%, rgba(102, 255, 153, 0) 100%);
+}
+body.terminal .social-icon {
+    background-color: rgba(8, 12, 10, 0.9);
+    border: 1px solid rgba(102, 255, 153, 0.18);
+}
+body.terminal .social-icon:hover {
+    transform: none;
+    color: var(--accent);
+    border-color: rgba(102, 255, 153, 0.35);
+    box-shadow: none;
+}
+
+/* Interests / Icons */
+body.terminal .interest-icon,
+body.terminal .education-icon {
+    background-color: rgba(8, 12, 10, 0.7);
+    border: 1px solid rgba(102, 255, 153, 0.25);
+    box-shadow: none;
+}
+body.terminal .interest-item:hover .interest-icon {
+    box-shadow: none;
+    transform: none;
+    background-color: rgba(102, 255, 153, 0.08);
+}
+
+/* Mobile menu: terminal overlay */
+body.terminal .mobile-menu {
+    background-color: rgba(8, 12, 10, 0.98);
+}
+
+/* Scroll icon: reduce decoration */
+body.terminal .scroll-icon { border-color: var(--accent); }
+body.terminal .scroll-text { color: var(--text-secondary); }
+
+/* De-emphasize heavy animations for minimal look */
+@media (prefers-reduced-motion: reduce) {
+    body.terminal * { animation: none !important; transition: none !important; }
+}
+
+/* Terminal theme polish */
+body.terminal .nav-logo-link {
+    background: rgba(102, 255, 153, 0.08);
+    box-shadow: 0 0 0 2px rgba(102, 255, 153, 0.12);
+}
+
+body.terminal .scroll-icon {
+    animation: none;
+}
+
+/* Terminal theme: remove decorative glows and gradients */
+body.terminal .about-section::before,
+body.terminal .projects-section::before,
+body.terminal .skills-section::before,
+body.terminal .footer-section::after {
+    display: none !important;
+}
+
+body.terminal .education-section,
+body.terminal .interests-section,
+body.terminal .projects-section,
+body.terminal .skills-section,
+body.terminal .about-section,
+body.terminal .footer-section {
+    background: none !important;
+}
+
+/* Slightly smaller hero title for minimal feel */
+@media (min-width: 769px) {
+    body.terminal .name { font-size: 4rem; }
+}
