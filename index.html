@@ -14,7 +14,7 @@
     <!-- AOS (Animate On Scroll) CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="terminal">
+<body class="retro95">
     <div class="noise-overlay"></div>
     
     <header class="header">
@@ -396,5 +396,23 @@
             AOS.refresh();
         });
     </script>
+
+    <!-- Windows 95-inspired taskbar -->
+    <div class="taskbar-95" role="navigation" aria-label="Taskbar">
+        <button class="start-btn-95" id="start-btn" aria-haspopup="true" aria-expanded="false">
+            <span class="start-logo" aria-hidden="true"></span>
+            Start
+        </button>
+        <div class="taskbar-spacer"></div>
+        <div class="taskbar-clock" id="taskbar-clock" aria-live="polite">--:--</div>
+        <div class="start-menu-95" id="start-menu" aria-hidden="true">
+            <a href="#about" class="start-item">About</a>
+            <a href="#projects" class="start-item">Projects</a>
+            <a href="#skills" class="start-item">Skills</a>
+            <a href="#education" class="start-item">Education</a>
+            <a href="#interests" class="start-item">Interests</a>
+            <a href="#contact" class="start-item">Contact</a>
+        </div>
+    </div>
 </body>
 </html>

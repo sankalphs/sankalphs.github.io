@@ -143,4 +143,37 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         AOS.refresh();
     });
+
+    // --- Windows 95 Start menu + Clock ---
+    const startBtn = document.getElementById('start-btn');
+    const startMenu = document.getElementById('start-menu');
+    const clockEl = document.getElementById('taskbar-clock');
+
+    if (startBtn && startMenu) {
+        startBtn.addEventListener('click', () => {
+            const isOpen = startMenu.classList.toggle('open');
+            startBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            startMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!startMenu.contains(e.target) && !startBtn.contains(e.target)) {
+                startMenu.classList.remove('open');
+                startBtn.setAttribute('aria-expanded', 'false');
+                startMenu.setAttribute('aria-hidden', 'true');
+            }
+        });
+    }
+
+    function pad(n){ return n.toString().padStart(2, '0'); }
+    function updateClock(){
+        if (!clockEl) return;
+        const d = new Date();
+        const h = d.getHours();
+        const m = d.getMinutes();
+        clockEl.textContent = `${pad(h)}:${pad(m)}`;
+    }
+    updateClock();
+    setInterval(updateClock, 15000);
 });
