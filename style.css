@@ -447,6 +447,85 @@ footer.footer-section {
     font-family: var(--font-secondary);
 }
 
+/* Achievements Section */
+.achievements-section {
+    padding: 6rem 0;
+    background-color: var(--bg-primary);
+    position: relative;
+}
+
+.achievements-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 380px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.achievements-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-card {
+    background-color: rgba(25, 25, 25, 0.7);
+    border: 1px solid rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: var(--accent-dark);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 229, 255, 0.12);
+    transform: translateY(-6px);
+}
+
+.achievement-logo {
+    display: block;
+    margin: 0 auto 1rem;
+    width: clamp(90px, 18vw, 160px);
+    height: auto;
+    filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.08));
+}
+
+.achievement-title {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.achievement-duration {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+}
+
+.achievement-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-family: var(--font-secondary);
+    max-width: 720px;
+    margin: 0.5rem auto 0;
+}
+
+@media (max-width: 768px) {
+    .achievement-card { padding: 1.5rem; }
+    .achievement-title { font-size: 1.15rem; }
+    .achievement-description { font-size: 0.95rem; }
+}
+
 /* Skills Section */
 .skills-section {
     padding: 6rem 0;
@@ -1579,6 +1658,7 @@ body.terminal .scroll-icon {
 /* Terminal theme: remove decorative glows and gradients */
 body.terminal .about-section::before,
 body.terminal .projects-section::before,
+body.terminal .achievements-section::before,
 body.terminal .skills-section::before,
 body.terminal .footer-section::after {
     display: none !important;
@@ -1587,11 +1667,25 @@ body.terminal .footer-section::after {
 body.terminal .education-section,
 body.terminal .interests-section,
 body.terminal .projects-section,
+body.terminal .achievements-section,
 body.terminal .skills-section,
 body.terminal .about-section,
 body.terminal .footer-section {
     background: none !important;
 }
+
+/* Terminal theme: Achievements card */
+body.terminal .achievement-card {
+    background-color: rgba(8, 12, 10, 0.7);
+    border: 1px solid rgba(102, 255, 153, 0.18);
+    box-shadow: none;
+}
+body.terminal .achievement-card:hover {
+    transform: none;
+    border-color: rgba(102, 255, 153, 0.35);
+    box-shadow: 0 0 0 1px rgba(102, 255, 153, 0.08);
+}
+body.terminal .achievement-logo { filter: none; }
 
 /* Slightly smaller hero title for minimal feel */
 @media (min-width: 769px) {
